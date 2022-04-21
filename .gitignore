@@ -1,0 +1,6 @@
+#and so on
+__pycache__/
+logs/
+
+#macbook stuff
+.DS_Store
