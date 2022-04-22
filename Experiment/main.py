@@ -14,10 +14,10 @@ datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 def main():
     subject = sys.argv[1]
     sess =  sys.argv[2]
-    # 5 conditions: PRF2R, PRF1R, PRF1S, PRF4R, PRF4F 
-    #(2 squares Regular speed, 1 square Regular, 1 square Slow, 4 square Regular, 4 square Fast)
+    # 3 conditions: AS0, AS1, AS2
+    # (no scotoma, scotoma at [0,0], scotoma at [2,0])
     task = sys.argv[3]
-    #in the full experiment we would do 3 runs
+    #in the full experiment we would do 3 runs?
     run = sys.argv[4]
     
     
