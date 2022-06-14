@@ -21,8 +21,8 @@ All tasks follow the regular PRF stimulus settings: 2 squares per checkerboard b
 The Experiment folder contains 3 setting files. The Task names are:
 
 - AS0: No scotoma (i.e., normal PRF mapping)
-- AS1: Scotoma position 1 (circle: x=0,y=0, width=2)
-- AS2: Scotoma position 2 (circle: x=2,y=0, width=2)
+- AS1: Scotoma position 1 (circle: x=1,y=0, width=1)
+- AS2: Scotoma position 2 (circle: x=0,y=0, width=2)
 
 Note that the actual task (fixation dot color discrimination) is identical in all cases.
 

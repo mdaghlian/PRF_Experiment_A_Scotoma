@@ -33,7 +33,7 @@ mri:
     #only relevant for scanning simulations
     simulate: True #set this to true to simulate a virtual scanner   
     TA: 1.5  # seconds to acquire one volume
-    volumes: 100  # number of 3D volumes to obtain in a given scanning run
+    volumes: 225  # number of 3D volumes to obtain in a given scanning run
     sync: t  # character used as flag for simulation sync timing, default=‘5’
     skip: 0  # how many frames to silently omit initially during T1 stabilization, no sync pulse.
     sound: False  # simulate scanner noise
@@ -52,7 +52,7 @@ PRF stimulus settings:
     Bar step length: 5                # in seconds. this is only used if Scanner sync is set to False
     # *************** SCOTOMA PARAMETERS *************************
     Scotoma : True # False=no scotoma, True=include scotoma
-    Scotoma Position : [2.0, 0.0] # Centre of scotoma (circle on screen)
+    Scotoma Position : [0.0, 0.0] # Centre of scotoma (circle on screen)
     Scotoma radius in degrees: 2.0 # Radius of scotoma
     
     

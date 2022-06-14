@@ -48,7 +48,7 @@ class PRFStim(object):
         
         bar_start_idx=int(np.round(self.tex_nr_pix/2-self.bar_width_in_pixels/2))
         bar_end_idx=int(bar_start_idx+self.bar_width_in_pixels)+1
-
+        print(f"{bar_start_idx:.3f}")
         self.sqr_tex[:,:bar_start_idx] = 0       
         self.sqr_tex[:,bar_end_idx:] = 0
 
