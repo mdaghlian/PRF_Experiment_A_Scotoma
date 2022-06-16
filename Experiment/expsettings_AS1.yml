@@ -52,8 +52,8 @@ PRF stimulus settings:
     Bar step length: 5                # in seconds. this is only used if Scanner sync is set to False
     # *************** SCOTOMA PARAMETERS *************************
     Scotoma : True # False=no scotoma, True=include scotoma
-    Scotoma Position : [1.0, 0.0] # Centre of scotoma (circle on screen)
-    Scotoma radius in degrees: 1.0 # Radius of scotoma
+    Scotoma Position : [0.8284, 0.8284] # Centre of scotoma (circle on screen)
+    Scotoma radius in degrees: 0.8284 # Radius of scotoma
     
     
 
