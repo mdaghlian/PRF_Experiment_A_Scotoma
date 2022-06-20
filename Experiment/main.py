@@ -20,18 +20,28 @@ def main():
     #in the full experiment we would do 3 runs?
     run = sys.argv[4]
     
+    try:
+        eye = sys.argv[5]
+    except:
+        eye = 0
+
+    if eye == 0:
+        eyetracker_on = False
+    else:
+        eyetracker_on = True
     
-    output_str= subject+'_'+sess+'_'+task+'_'+run
     
-    output_dir = './'+output_str+'_Logs'
+    output_str= f"sub-{subject}_ses-{sess}_task-{task}_run-{run}"
+    
+    output_dir = './logs/'+output_str+'_Logs'
     
     if os.path.exists(output_dir):
         print("Warning: output directory already exists. Renaming to avoid overwriting.")
         output_dir = output_dir + datetime.now().strftime('%Y%m%d%H%M%S')
     
-    settings_file='./expsettings_'+task[5:]+'.yml'
+    settings_file='./expsettings_'+task+'.yml'
 
-    ts = PRFSession(output_str=output_str, output_dir=output_dir, settings_file=settings_file)
+    ts = PRFSession(output_str=output_str, output_dir=output_dir, settings_file=settings_file, eyetracker_on=eyetracker_on)
     ts.run()
 
 if __name__ == '__main__':

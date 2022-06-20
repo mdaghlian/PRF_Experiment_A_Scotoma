@@ -10,6 +10,7 @@ window:
     fullscr: True
     winType: pyglet
     waitBlanking: True
+    screen: 1    
 
 monitor:
     name: default
@@ -17,13 +18,17 @@ monitor:
     distance: 210  # in cm
     gamma: 1
 
-operating system: windows # specify the OS the code is run on as 'mac', 'linux', or 'windows'
+operating system: linux # specify the OS the code is run on as 'mac', 'linux', or 'windows'
 
 mouse:
     visible: False
 
 eyetracker:
     model: eyelink
+    address: '100.1.1.1'
+    dot_size: 0.1  # in deg
+    options:
+        calibration_type: HV5    
 
 mri:
     TR: 1.5  # seconds between volume acquisitions
