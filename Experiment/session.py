@@ -247,10 +247,16 @@ class PRFSession(PylinkEyetrackerSession):
     def run(self):
         """run the session"""
         # cycle through trials
+        if self.eyetracker_on:
+            self.calibrate_eyetracker()
+
         self.display_text('Waiting for scanner', keys=self.settings['mri'].get('sync', 't'))
 
         self.start_experiment()
         
+        if self.eyetracker_on:
+            self.start_recording_eyetracker()            
+
         for trial_idx in range(len(self.trial_list)):
             self.current_trial = self.trial_list[trial_idx]
             self.current_trial_start_time = self.clock.getTime()

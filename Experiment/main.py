@@ -34,13 +34,10 @@ def main():
     output_str= f"sub-{subject}_ses-{sess}_task-{task}_run-{run}"
     
     output_dir = './logs/'+output_str+'_Logs'
-    
-    # CHANGED -> Always include exact date & time in logs, so if in doubt we can reconstruct the order of scans
-    output_dir = output_dir + datetime.now().strftime('%Y%m%d%H%M%S')
 
-    # if os.path.exists(output_dir):
-    #     print("Warning: output directory already exists. Renaming to avoid overwriting.")
-    #     output_dir = output_dir + datetime.now().strftime('%Y%m%d%H%M%S')
+    if os.path.exists(output_dir):
+        print("Warning: output directory already exists. Renaming to avoid overwriting.")
+        output_dir = output_dir + datetime.now().strftime('%Y%m%d%H%M%S')
     
     settings_file='./expsettings_'+task+'.yml'
 
