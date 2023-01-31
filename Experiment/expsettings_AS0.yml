@@ -15,8 +15,8 @@ window:
 monitor:
     name: default
     width: 69  # in cm
-    distance: 210  # in cm ? OR 225 (never) OR 196
-    gamma: 1
+    distance: 210  # NOTE - it is actually 196; but for consistency in size kept it at 210 
+    gamma: 2.1
 
 operating system: linux # specify the OS the code is run on as 'mac', 'linux', or 'windows'
 
@@ -30,7 +30,7 @@ eyetracker:
     options: # Eyelink specific settings
         active_eye: left  # [right]
         calibration_type: HV5  # [H3, HV3, HV5, HV9], # Jurjen = HV5
-        sample_rate: 250
+        sample_rate: 1000
         calibration_area_proportion: 0.4 0.4
         validation_area_proportion: 0.4 0.4                
 
